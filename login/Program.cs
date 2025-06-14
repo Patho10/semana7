@@ -4,21 +4,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _01_Mi_primera_vez
+namespace login
 {
     internal static class Program
     {
-        //variables globales
-        public static int UsuarioId;
-        public static string NombreUsuario;
-        public static bool estado;
+        /// <summary>
+        /// Punto de entrada principal para la aplicación.
+        /// </summary>
+        /// 
+        public static string Nombreusuario = "";
+        public static int Estado = 0;
+        public static int UsuarioId = 0;
 
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new Form1());
         }
     }
 }
