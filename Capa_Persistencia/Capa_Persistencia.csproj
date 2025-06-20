@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D011943-ED99-4463-A2DF-34A346310854}</ProjectGuid>
+    <ProjectGuid>{7AF23BF7-106F-4826-B619-84B180253847}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>login</RootNamespace>
-    <AssemblyName>login</AssemblyName>
+    <RootNamespace>Capa_Persistencia</RootNamespace>
+    <AssemblyName>Capa_Persistencia</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,24 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config\Conexion.cs" />
-    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\loginModel.cs" />
-    <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vistas\FRM_MenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\FRM_MenuPrincipal.Designer.cs">
-      <DependentUpon>FRM_MenuPrincipal.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,9 +66,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\FRM_MenuPrincipal.resx">
-      <DependentUpon>FRM_MenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Aplicacion\Capa_Aplicacion.csproj">
+      <Project>{ac2c2765-e697-47d8-98b6-7ccde58427b7}</Project>
+      <Name>Capa_Aplicacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Datos\Capa_Datos.csproj">
+      <Project>{e87748fc-cfd6-4b86-8253-a9c140c53166}</Project>
+      <Name>Capa_Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

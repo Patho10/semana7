@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D011943-ED99-4463-A2DF-34A346310854}</ProjectGuid>
+    <ProjectGuid>{1419A4A9-776B-49F6-8236-9F3B56DD6DAA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>login</RootNamespace>
-    <AssemblyName>login</AssemblyName>
+    <RootNamespace>WindowsFormsCRUD</RootNamespace>
+    <AssemblyName>WindowsFormsCRUD</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,24 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config\Conexion.cs" />
-    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="AccesoDatos\ClaseUusarios.cs" />
+    <Compile Include="AccesoDatos\Conexion.cs" />
+    <Compile Include="Aplicacion\UsuarioService.cs" />
+    <Compile Include="Datos\LoginDTO.cs" />
+    <Compile Include="Datos\UsuarioModel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\loginModel.cs" />
-    <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vistas\FRM_MenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\FRM_MenuPrincipal.Designer.cs">
-      <DependentUpon>FRM_MenuPrincipal.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,9 +71,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\FRM_MenuPrincipal.resx">
-      <DependentUpon>FRM_MenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +84,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Persistencia\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

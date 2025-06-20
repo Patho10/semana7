@@ -10,9 +10,9 @@ namespace login.Controllers
 {
     class AuthController
     {
-        public List<Models.loginModel> _listaLoginModels = new List<Models.loginModel>();
-
-        public AuthController()
+        // public List<Models.loginModel> _listaLoginModels = new List<Models.loginModel>();
+        private Models.loginModel _loginModel = new Models.loginModel();
+       /* public AuthController()
         {
             var usuario = new Models.loginModel
             {
@@ -24,7 +24,8 @@ namespace login.Controllers
                 UsuarioId = 1
             };
             _listaLoginModels.Add(usuario);
-        }
+        }*/
+       /*
         public List<Models.loginModel> todos()
         {
             return _listaLoginModels;
@@ -39,23 +40,10 @@ namespace login.Controllers
         {
             return _listaLoginModels.Find(u => u.NombreUsuario == usuario);
         }
-
+       */
         public string login(Models.loginModel Usuario)
         {
-            var user = _listaLoginModels
-                .Find(u => u.NombreUsuario == Usuario.NombreUsuario
-                && u.Contrasenia == Usuario.Contrasenia);
-            if (user != null)
-            {
-                Program.Nombreusuario = user.NombreUsuario;
-                Program.Estado = 1;
-                Program.UsuarioId = user.UsuarioId;
-                return "ok";
-            }
-            else
-            {
-                return "Error: El Usuario o la contraseña son incorrectos";
-            }
+            return _loginModel.VerificarLogin(Usuario);
         }
 
         public void logOut()
