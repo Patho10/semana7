@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alertas_Timer", "Alertas_Timer.csproj", "{5AED1726-1AA1-4EC2-A76C-5A864A71B79C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AED1726-1AA1-4EC2-A76C-5A864A71B79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AED1726-1AA1-4EC2-A76C-5A864A71B79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AED1726-1AA1-4EC2-A76C-5A864A71B79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AED1726-1AA1-4EC2-A76C-5A864A71B79C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {325DA8F7-C75C-4A5B-9515-2E5A0E43EECC}
+	EndGlobalSection
+EndGlobal
